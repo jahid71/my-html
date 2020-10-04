@@ -1,0 +1,40 @@
+<script src="jquery3.5.1.js">
+</script>
+<script>
+  $(document).ready(function(){
+    
+    $("p").hide();
+    $(".remove").hide();
+    
+    $(".add_class").click(function(){
+      $(".container").addClass("zero",2000);
+      $("p").show("1000");
+      $(".remove").show("1000");
+      $(".add_class").hide();
+    });
+   
+$(".remove").click(function(){
+  $(this).hide();
+  $("p").hide();
+  $(".add_class").show();
+  $(".container").removeClass("zero");
+});
+  
+  });
+</script>
+<button class="add_class">Add class</button>
+<style>
+.container{
+  background:red;
+  width:50%;
+  height:150px;
+  margin-top:15px;
+  border-radius:5px 20px 15px 8px;
+}
+.zero{
+  background:blue;
+}
+</style>
+<div class="container"></div>
+<p>New zero class added in .container div</p>
+<button class="remove">Remove zero class</button>
